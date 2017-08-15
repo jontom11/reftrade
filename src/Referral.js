@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import TextField from 'material-ui/TextField';
-import Avatar from 'material-ui/Avatar';
-import ListItem from 'material-ui/List/ListItem';
 import avatarImage from './jonathan.jpg';
-
+import {BrowserRouter as Route, Link} from 'react-router-dom';
 
 class Referral extends Component {
   constructor () {
@@ -42,28 +40,28 @@ class Referral extends Component {
   theirPhoneChange(f) {
     this.setState({theirPhone: f.target.value})
   }
-
-
+ 
   render() {
     let avatarStyle = {width: '300px'};
     let floatStyle = {
-      'font-family': 'Ubuntu', 
+      fontFamily: 'Ubuntu', 
       color: '#ddd'
     }
     let textStyle = {
-      'font-family': 'Ubuntu', 
+      fontFamily: 'Ubuntu', 
       color: '#ffe',
     };
 
     return (
       <div id="Referral"> 
+        <div><Link to='ProfilePage'>Profile Page</Link> </div>
+        <div><Link exact={true} to='/'>Home Page</Link></div>
         <h2 id='ReferralHeader'>You Got the Route Baby!</h2>
-        <div><img src={avatarImage} style={avatarStyle}/></div>
+        <div><img src={avatarImage} style={avatarStyle} alt={'missing'}/></div>
         <button onTouchTap={()=>console.log(this.state)}>See State</button>
         <div>
           <TextField
             floatingLabelText="Your First and Last Name"
-            /*errorText="This field is required"*/
             onChange={this.yourNameChange}
             floatingLabelStyle = {floatStyle}
             inputStyle = {textStyle}

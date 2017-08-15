@@ -16,8 +16,8 @@ class App extends Component {
         <MuiThemeProvider>
           <div className="App">
             <Route exact={true} path ='/' component={Login} />
-            <Route path ='/ReferralPage' component={Referral} />
             <Route path ='/ProfilePage' component={Profile} />
+            <Route path ='/ReferralPage' component={Referral} />
           </div>
         </MuiThemeProvider>
       </Router>
