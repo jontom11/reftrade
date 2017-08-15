@@ -5,8 +5,8 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <div>Welcome Jonathan</div>
-        <Link to='profilePage d'> 
+        <div>The Referrals Trade</div>
+        <Link to='profilePage'> 
           Click Here to go to Profile Page
         </Link>          
 
